@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <div class="header">
+        <h1>📝 To-Do</h1>
+        <button id="theme-toggle">🌙</button>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="todo-input" placeholder="Neue Aufgabe...">
+        <input type="color" id="color-input" value="#4CAF50">
+        <select id="prio-input">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button id="add-btn">+</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

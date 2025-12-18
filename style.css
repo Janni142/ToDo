@@ -1,0 +1,142 @@
+:root {
+    --bg: #f2f2f2;
+    --card: #ffffff;
+    --text: #000;
+    --item: #eeeeee;
+}
+
+body.dark {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #fff;
+    --item: #2a2a2a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app {
+    background: var(--card);
+    width: 100%;
+    max-width: 420px;
+    height: 90vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* PC breiter */
+@media (min-width: 900px) {
+    .app {
+        max-width: 700px;
+        height: 80vh;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.input-area {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: var(--item);
+    color: var(--text);
+}
+
+#todo-input {
+    flex: 1;
+}
+
+#color-input {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+}
+
+#add-btn {
+    padding: 0 16px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+li {
+    background: var(--item);
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    border-left: 6px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+li.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.todo-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prio {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.prio.low { background: #8BC34A; }
+.prio.medium { background: #FFC107; }
+.prio.high { background: #F44336; color: white; }
